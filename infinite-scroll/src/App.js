@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import "./App.css";
 import useFetch from "./hooks/useFetch";
+import ListData from "./ListData";
 
 const URL = "https://openlibrary.org/search.json";
 const OPTIONS = {
@@ -52,24 +53,13 @@ function App() {
           onChange={(e) => setQuery(e.target.value)}
         />
       </div>
-      <div style={{ height: "90vh", overflow: "scroll" }}>
-        {data.map((d, i) => {
-          if (i === data.length - 1) {
-            return (
-              <p
-                ref={lastElementRef}
-                key={d.key + i}
-                style={{ color: "white", backgroundColor: "blue" }}
-              >
-                {d.title}
-              </p>
-            );
-          } else return <p key={d.key + i}>{d.title}</p>;
-        })}
-        {loading && <p>loading...</p>}
-        {error && <p>Error</p>}
-        {!hasMore && !loading && <p>**End of List**</p>}
-      </div>
+      <ListData
+        loading={loading}
+        data={data}
+        error={error}
+        hasMore={hasMore}
+        lastElementRef={lastElementRef}
+      />
     </div>
   );
 }
