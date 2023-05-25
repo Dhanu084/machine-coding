@@ -1,0 +1,28 @@
+.App {
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.timer {
+  font-size: 5rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  display: flex;
+  padding: 10px 25px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 10px;
+  height: 50px;
+}
