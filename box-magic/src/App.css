@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.box {
+  height: 150px;
+  width: 150px;
+  border: 1px solid black;
+}
