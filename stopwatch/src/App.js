@@ -1,14 +1,19 @@
 import { useState, useRef } from "react";
 import "./App.css";
 
+const displayFormatter = (val) => {
+  return val.length < 2 ? `0${val}` : val;
+};
+
 function App() {
   const [timeVal, setTimeVal] = useState(0);
   const timer = useRef(null);
 
   const displayTime = () => {
-    return `${Math.floor(timeVal / (60 * 60))}:${Math.floor(
-      timeVal / 60
-    )}:${Math.floor(timeVal % 60)}`;
+    const hour = displayFormatter(Math.floor(timeVal / (60 * 60)) + "");
+    const minutes = displayFormatter(Math.floor(timeVal / 60) + "");
+    const seconds = displayFormatter(Math.floor(timeVal % 60) + "");
+    return `${hour}:${minutes}:${seconds}`;
   };
 
   const startTimer = () => {
