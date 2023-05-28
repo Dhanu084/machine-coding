@@ -1,0 +1,20 @@
+.App {
+  text-align: center;
+}
+
+.grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+  gap: 10px;
+  place-items: center;
+}
+
+.box {
+  height: 250px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+}

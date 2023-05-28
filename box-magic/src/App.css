@@ -1,13 +1,24 @@
 .App {
   text-align: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.grid {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 200px);
   gap: 10px;
-  margin-left: 10px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
 }
 
 .box {
   height: 150px;
   width: 150px;
   border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

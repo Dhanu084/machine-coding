@@ -75,7 +75,11 @@ function App() {
     return value;
   }
 
-  return <div className='App'>{getBoxes(false)}</div>;
+  return (
+    <div className='App'>
+      <div className='grid'>{getBoxes(false)}</div>
+    </div>
+  );
 }
 
 export default App;
