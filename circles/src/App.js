@@ -78,13 +78,8 @@ function App() {
   }, [smallCircles]);
 
   const handleCircleSelection = (id) => {
-    if (
-      selectedCircle1 &&
-      selectedCircle2 &&
-      selectedCircle1 === selectedCircle2
-    ) {
-      return;
-    }
+    if (selectedCircle1 && id === selectedCircle1) return;
+    if (selectedCircle2 && id === selectedCircle2) return;
     if (selectedCircle1 === null) setSelectedCircle1(id);
     else if (selectedCircle2 === null) setSelectedCircle2(id);
   };
