@@ -1,12 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./App.css";
 import SingleCard from "./SingleCard";
+import cat1 from "./img/cat1.jpg";
+import cat2 from "./img/cat2.jpg";
+import cat3 from "./img/cat3.jpg";
 
 const initialCards = [
-  { text: "A" },
-  { text: "B" },
-  { text: "C" },
-  { text: "D" }
+  { text: "A", img: cat1 },
+  { text: "B", img: cat2 },
+  { text: "C", img: cat3 }
 ];
 
 const colors = [

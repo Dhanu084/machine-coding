@@ -6,19 +6,21 @@ const SingleCard = ({
   selectedCard2,
   handleSelection
 }) => {
+  const isMatching = (card) => {
+    return card.isMatched || selectedCard1 === card || selectedCard2 === card;
+  };
   return (
     <div
       className='box'
       onClick={() => handleSelection(card)}
       style={{
         backgroundColor: card.bg,
-        color: card.tc
+        color: card.tc,
+        backgroundImage: isMatching(card) ? `url(${card.img})` : "",
+        backgroundSize: "cover",
+        backgroundPosition: "center"
       }}
-    >
-      {(card.isMatched || selectedCard1 === card || selectedCard2 === card) && (
-        <span>{card.text}</span>
-      )}
-    </div>
+    ></div>
   );
 };
 
