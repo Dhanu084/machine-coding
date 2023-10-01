@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { useEffect, useState } from "react";
 
@@ -84,7 +83,9 @@ function App() {
 
   const mergeCircles = (circle) => {
     if (!selectedCircleOne) setSelectedCircleOne(circle);
-    else if (!selectedCircleTwo) setSelectedCircleTwo(circle);
+    else if (!selectedCircleTwo && circle.id !== selectedCircleOne.id) {
+      setSelectedCircleTwo(circle);
+    }
   };
 
   const handleClick = (circle) => {
